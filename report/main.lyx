@@ -1,0 +1,3420 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/anto/Scaricati/report/
+\textclass article
+\begin_preamble
+
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+
+
+% Useful packages
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage[table]{xcolor}
+\newcommand{\blfootnote}[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+% Keywords command
+\providecommand{\keywords}[1]{
+  \small	
+  \textbf{\textit{Keywords --- }} #1
+}
+
+
+\title{\vspace{-2cm}\textbf{Toxic Comment Classification}}
+\author{\small{\textit{Antonio Di Mauro  - 599785 - a.dimauro3@studenti.unipi.it - MSc in Artificial Intelligence}} \\ 
+        \small{\textit{Domenico Tupputi - 585794 - d.tupputi@studenti.unipi.it - MSc in Artificial Intelligence}} \\ 
+        \small{Human Languages Technologies, Academic Year: 2020/2021}}
+
+
+\end_preamble
+\options 10.5pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 0
+\pdf_quoted_options "allcolors=blue"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+newcolumntype
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Y
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+>
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+arraybackslash
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+X
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename uni.png
+	width 30text%
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+A large percentage of online comments on public domains are generally constructive, however a significant percentage are toxic in nature. In this article, we focus on the different approaches regarding the problem of the classification of toxic comments online. This task is a research initiative founded by Jigsaw and Google (both part of Alphabet) who are working on tools, which use Natural Language Processing techniques, to help improve online conversation. 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+keywords{
+\end_layout
+
+\end_inset
+
+Natural Language Processing, Bert, Neural Network, Toxic comment classification, Deep learning, Preprocessing. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 5pt
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrule
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 6pt
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begingroup
+\end_layout
+
+\end_inset
+
+ 
+\size small
+
+\shape italic
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. HLT, 2019/20, University of Pisa, Italy Â© 2021 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-x-xxxx-xxxx-x/YY/MM. . . $0.00 https://doi.org/10.1145/nnnnnnn.nnnnnnn
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Keeping online conversations constructive and inclusive is a crucial task for platform providers. Automatic classification of toxic comments, such as hate speech, threats, and insults, can help in keeping discussions fruitful. In addition, new regulations in certain European countries have been established enforcing to delete illegal content in less than 72 hours.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Active research on the topic deals with common challenges of natural language processing, such as long-range dependencies or misspelled and idiosyncratic words.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+We will use a dataset of comments on Wikipedia talk pages presented by Google Jigsaw during Kaggleâs Toxic Comment Classification Challenge 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "competitiontoxic"
+literal "false"
+
+\end_inset
+
+. These sets include common difficulties in datasets for the task: They are labeled based on different definitions; they include diverse language from user comments; and they present a multi-class and a multi-label classification task respectively. In this work, we apply and compare different classifiers. Each classifier, such as Logistic Regression, Multi-layer Perceptron, is meant to tackle specific challenges for text classification. We apply the same classifiers to a dataset of validate our results.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Unfortunately for the problem, but fortunately for the Wikipedia community, toxic comments are rare. Just over 10% of this dataset is labeled as toxic, but some of the subcategories are extremely rare making up less than 1% of the data.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Because of this imbalance, accuracy is a practically useless metric for evaluating classifiers for this problem.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% centering table
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tabularx}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+YYY
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%inserting double-line
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Author & Models & AUC 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ HOON BENG 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "logisticregressionsolution"
+literal "false"
+
+\end_inset
+
+ & Logistic Regression & 0.9741 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ AMIR ASHRAFF 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "Forkofensemble_3_blend"
+literal "false"
+
+\end_inset
+
+ & ensemble models & 0.98705 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BOJAN TUNGUZ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "Bi-GRU-LSTMDualEmbedding"
+literal "false"
+
+\end_inset
+
+ & Bi-GRU-LSTM Dual Embedding & 0.98702 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Jay Speidell 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "jayspeidellToxicCommentClassification"
+literal "false"
+
+\end_inset
+
+ & NB-SVM & 0.9747 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ SMU Data Science Review 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "ToxicCommentOnelabel"
+literal "false"
+
+\end_inset
+
+ & SVM & 0.9725 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Chun Ming Lee 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "KaggleSOTA"
+literal "false"
+
+\end_inset
+
+ & Vanilla Bi-GRU & 0.9885 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tabularx}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+captionof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+table
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+State Of The Art
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab_art"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Kaggle challenge based on this dataset uses ROC/AUC, or the area under a receiver operating characteristic curve, to evaluate submissions.
+\end_layout
+
+\begin_layout Standard
+Each metrics that we will use gives valuable insight into a modelâs performance, but they fail to show the whole picture and have weaknesses where bad models get high scores. Predicting all positive values will bring recall up to 100%, while missing true positives will be penalized. Precision will harshly penalize false positives, but a model that predicts mostly negative can achieve a high precision score whether or not the predictions are accurate.
+\end_layout
+
+\begin_layout Standard
+The F1 score is a harmonic average between precision and recall. This combines the strengths of precision and recall while balancing out their weaknesses.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In summary, the following metrics will be shown: 
+\end_layout
+
+\begin_layout Enumerate
+Precision (P): the ability of the classifier not to label as positive a sample that is negative. 
+\end_layout
+
+\begin_layout Enumerate
+Recall (R): the ability of the classifier to find all the positive samples. 
+\end_layout
+
+\begin_layout Enumerate
+F1-score (F1): the relative contribution of precision and recall (best value at 1 and worst score at 0). 
+\end_layout
+
+\begin_layout Enumerate
+AUC: the conventional area-under-the-curve score, as implemented in scikit-learn. It is a measure of separability of classes. 
+\end_layout
+
+\begin_layout Enumerate
+Accuracy (A): is the ratio of number of correct predictions to the total number of input samples. 
+\end_layout
+
+\begin_layout Section
+State of the art
+\end_layout
+
+\begin_layout Standard
+In this section we will highlight the state of the art (SOTA) of this task, according to participants in the Toxic Comment Classification Challenge. You can see a brief summary in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab_art"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+. The models involved range from Logistic Regression to an ensemble of multiple models. Many models to suppress data imbalance have unified the labels 'toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate' in a single label.
+\end_layout
+
+\begin_layout Standard
+Others have tried a more agnostic approach using stylometric characteristics (ex: word frequencies, POS tags, N-grams, ...) and also classic characteristic sets such as token or character n-gram representation. Many other approaches using BERT models. As for the resulting performances for all the listed works, it is possible to consult the Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab_art"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As for the resulting performance for all the listed works, as noticeable, they all have a very high AUC, but looking at F1 score, it's really very low, averaging around 0.5.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% centering table
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename dataset_example.png
+	scale 37
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+captionof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+table
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Example of data from the Kaggle dataset
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab_dataset"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dataset
+\end_layout
+
+\begin_layout Standard
+The task of toxic comment classification lacks a consistently labeled standard dataset for comparative evaluation (Schmidt and Wiegand, 2017) 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "SchmidtandWiegand"
+literal "false"
+
+\end_inset
+
+. While there are a number of annotated public datasets in adjacent fields, such as hate speech (Ross et al., 2016; Gao and Huang, 2017) 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "RossHuang"
+literal "false"
+
+\end_inset
+
+, racism/sexism (Waseem, 2016; Waseem and Hovy, 2016) 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "HateSpeechDetection"
+literal "false"
+
+\end_inset
+
+ or harassment (Golbeck et al., 2017) 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "OnlineHarassmentResearch"
+literal "false"
+
+\end_inset
+
+ detection, most of them follow different definitions for labeling and therefore often constitute different problems.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% centering table
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tabularx}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+0.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+YY
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% creating eight columns
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%inserting double-line
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Class & # of occurrences 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% inserts single-line
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Clean & 201,081 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Entering row contents
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Toxic & 15,294 
+\begin_inset Newline newline
+\end_inset
+
+ Obscene & 8,449 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Entering row contents
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Insult & 7,877 
+\begin_inset Newline newline
+\end_inset
+
+ Identity Hate & 1,405 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Entering row contents
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Severe Toxic & 1,595 
+\begin_inset Newline newline
+\end_inset
+
+ Threat & 478 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% [1ex] adds vertical space
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% inserts single-line
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tabularx}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+captionof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+table
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Class distribution of Wikipedia dataset. The distribution shows a strong class imbalance.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab_class"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We analyse a dataset published by Google Jigsaw in December 2017 over the course of the âToxic Comment Classification Challengeâ on Kaggle 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "datasetkaggle"
+literal "false"
+
+\end_inset
+
+. It includes 223,549 annotated user comments collected from Wikipedia talk pages and is the largest publicly available for the task. These comments were annotated by human raters with the six labels âtoxicâ, âsevere toxic, âinsultâ, âthreatâ, âobsceneâ and âidentity hateâ.
+\end_layout
+
+\begin_layout Standard
+Comments can be associated with multiple classes at once, which frames the task as a multi-label classification problem. Jigsaw has not published official definitions for the six classes. But they do state that they defined a toxic comment as âa rude, disrespectful, or unreasonable comment that is likely to make you leave a discussion.
+\end_layout
+
+\begin_layout Standard
+The dataset features show an unbalanced class distribution, shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab_dataset"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab_class"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+. 201,081 samples fall under the majority âclearâ class matching none of the six categories, whereas 22,468 samples belong to at least one of the other classes. While the âtoxicâ class includes 9.6% of the samples, only 0.3% are labeled as âthreatâ, marking the smallest class. Comments were collected from the English Wikipedia and are mostly written in English with some outliers, e.g., in Arabic, Chinese or German language. The domain covered is not strictly locatable, due to various article topics being discussed. Still it is possible to apply a simple categorization of comments as follows: 
+\end_layout
+
+\begin_layout Enumerate
+âcommunity-relatedâ:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "19em"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Plain Layout
+ Example: âIf you continue to vandalize 
+\begin_inset Newline newline
+\end_inset
+
+ Wikipedia, you will be blocked from editing.â 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+âarticle-relatedâ:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "19em"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Plain Layout
+ Example: âDark Jedi Miraluka from the MidRim world of Katarr, Visas Marr is the lone surviving member of her species.â 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+âoff-topicâ:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset Box Boxed
+position "c"
+hor_pos "l"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "19em"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Plain Layout
+ Example: â== I hate how my life goes today == Just kill me now.â 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Experimental setup
+\end_layout
+
+\begin_layout Standard
+The experiments involve models from scikit-learn and tensorflow libraries.
+\begin_inset Newline newline
+\end_inset
+
+ Those from scikit-learn library are: Multinomial Naive Bayes, Linear Support Vector Classifier, Logistic Regression, K-Nearest Neightbours and Multi-layer Perceptron. A tf-idf vectorization, using stopwords from nltk library, of the input sentences are provided as input to all the models. A One-vs-the-rest (OvR) multiclass strategy is used with all the models and it consists in fitting one classifier per class and for each classifier, the class is fitted against all the other classes.
+\begin_inset Newline newline
+\end_inset
+
+ Those from tensorflow library are: Deep Echo State Network and distilBERT. The models are built using the keras build-in functions of tensorflow.
+\begin_inset Newline newline
+\end_inset
+
+ A grid search was done to find the final hyper-parameters of each model except for distilBERT because of computational and time constraints.
+\end_layout
+
+\begin_layout Subsection
+Multinomial Naive Bayes
+\end_layout
+
+\begin_layout Standard
+This model is implemented using the MultinomialNB class that implements the naive Bayes algorithm for multinomially distributed data. The distribution is parametrized by vectors 
+\begin_inset Formula $\theta_{y}=(\theta_{y1},...,\theta_{yn})$
+\end_inset
+
+ for each class y, where n is the number of features (in text classification, the size of the vocabulary) and 
+\begin_inset Formula $\theta_{y}=P(x_{i}|y)$
+\end_inset
+
+ of feature 
+\begin_inset Formula $i$
+\end_inset
+
+ appearing in a sample belonging to class 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ The parameter 
+\begin_inset Formula $\theta_{y}$
+\end_inset
+
+ is estimated by a smoothed version of maximum likelihood, i.e. relative frequency counting:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation}
+\hat\theta_{y}=\frac{N_{yi}+\alpha}{N_{y}+\alpha n}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $N_{yi}$
+\end_inset
+
+ is the number of times feature 
+\begin_inset Formula $i$
+\end_inset
+
+ appears in a sample of class 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ With the parameter fit_prior=True is assumed a uniform prior, with the parameter class_prior=None the prior is adjusted according to the data 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "mnb"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Linear Support Vector Classifier
+\end_layout
+
+\begin_layout Standard
+In a Linear Support Vector Machines we have a training dataset with 
+\shape italic
+n
+\shape default
+ points of the form 
+\begin_inset Formula $(\boldsymbol{x_{1}}, y_{1}),...,(\boldsymbol{x_{n}},y_{n})$
+\end_inset
+
+, where the 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ are either 1 or 
+\begin_inset Formula $-1$
+\end_inset
+
+, each indicating the class to which the point 
+\begin_inset Formula $\boldsymbol{x_{i}}$
+\end_inset
+
+ belongs. Each 
+\begin_inset Formula $\boldsymbol{x_{i}}$
+\end_inset
+
+ is a p-dimensional real vector. We want to find the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+maximum-margin hyperplane
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ that divides the group of points 
+\begin_inset Formula $\boldsymbol{x_{i}}$
+\end_inset
+
+ for which 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+ from the group of points for which 
+\begin_inset Formula $y_{i}=-1$
+\end_inset
+
+, which is defined so that the distance between the hyperplane and the nearest point 
+\begin_inset Formula $\boldsymbol{x_{i}}$
+\end_inset
+
+ from either group is maximized. Any hyperplane can be written as the set of points 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $w^{T}x-b=0$
+\end_inset
+
+, where 
+\begin_inset Formula $\boldsymbol{w}$
+\end_inset
+
+ is the (not necessarily normalized) normal vector to the hyperplane. 
+\begin_inset Formula $\frac{b}{\lVert w \lVert}$
+\end_inset
+
+ determines the offset of the hyperplane from the origin along the normal vector 
+\begin_inset Formula $\boldsymbol{w}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "lsvc"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ This model is implemented using the LinearSVC class that implements the Support Vector Classifier with linear kernel. It is capable of performing binary and multi-class classification on a dataset.
+\begin_inset Newline newline
+\end_inset
+
+ The parameter class_weight=balanced to automatically adjust weights inversely proportional to class frequencies in the input data.
+\end_layout
+
+\begin_layout Subsection
+Logistic Regression
+\end_layout
+
+\begin_layout Standard
+The Logistic Regression is a simple model described by the equation 
+\begin_inset Formula $\frac{1}{1+e^{-wx}}$
+\end_inset
+
+, in which we basically learn to binary separate the samples by softening the Perceptron's step-function with the continuous differentiable logistic equation previously described.
+\begin_inset Newline newline
+\end_inset
+
+ This models is implemented using the LogisticRegression class that implements regularized logistic regression. The solver is setted to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+lbfgs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "LogisticRegression"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+K-Nearest Neighbours
+\end_layout
+
+\begin_layout Standard
+The K-nearest neighbours is a non-parametric classification method in which the input consists of the k closest training examples in the dataset. The output is a class membership in which an object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "KNearestNeightbours"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ The model is implemented using the KNeighborsClassifier class that implements the k-nearest neighbors vote. The number of neighbors is set to 5.
+\end_layout
+
+\begin_layout Subsection
+Multi-layer Perceptron
+\end_layout
+
+\begin_layout Standard
+The Multi-layer Perceptron is a layered model made of different layers of artificial neurons, such that each unit receives input only from units in the immediate preceding layer. Each layer has a set of parameters 
+\series bold
+W
+\series default
+ to be learned through a proper learning algorithm. Each unit computes a weighted sum of its input 
+\begin_inset Formula $net_{j}=\sum_{i=0}^nw_{ij}a_{i}$
+\end_inset
+
+, where a is the output of the previous layer, and then it applies an activation function 
+\shape italic
+f
+\shape default
+ (e.g: sigmoid) such that the output 
+\begin_inset Formula $a_{j}=f(net_{j})$
+\end_inset
+
+. 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "Multilayer"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ This model is implemented using the MLPClassifier class that optimizes the log-loss function. The solver used is 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+Adam
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+, with one hidden layer with 100 units and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ReLu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ activation function. The learning rate is setted to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.001
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ with a maximum iterations of 100.
+\end_layout
+
+\begin_layout Subsection
+Deep Echo State Network
+\end_layout
+
+\begin_layout Standard
+The Echo State Network is a Reservoir Computing approach that uses a Recurrent Neural Network (RNN) with a sparsely connected hidden layer named 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+reservoir
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ with fixed and randomly assigned weights. The reservoir is constructed in such a way that respect the Echo State Property (ESP) that guarantees asymptotic stability to the reservoir in a dynamical system perspective; practically the recurrent weight matrix of the reservoir is scaled with the desired spectral radius, that in theory is 1. The weights of output neurons, called 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+readout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+, can be learned so that the network can produce or reproduce specific temporal patterns.
+\begin_inset Newline newline
+\end_inset
+
+ This model is implemented using the 
+\begin_inset CommandInset href
+LatexCommand href
+name "DeepRC.py"
+target "https://github.com/gallicch/DeepRC-TF/blob/master/DeepRC.py"
+literal "false"
+
+\end_inset
+
+of Prof. Gallicchio for the reservoir and keras for the readout.
+\begin_inset Newline newline
+\end_inset
+
+ The reservoir has 10 layers and each one with 200 units. Each reservoir layer computes the state of the RNN at each time step t as 
+\begin_inset Formula $h(t)=(1-\alpha)h(t-1)+\alpha tanh(\boldsymbol{U}x(t)+\boldsymbol{W}h(t-1))$
+\end_inset
+
+, where 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ (with the same dimension of the input) is the input weight matrix, 
+\begin_inset Formula $\boldsymbol{W}$
+\end_inset
+
+ (with dimension NxN where N is the number of recurrent units) is the recurrent weight matrix and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the leaking rate (
+\begin_inset Formula $\alpha \in (0,1]$
+\end_inset
+
+). In a multi-layer setting, the output of a reservoir layer is the input of the next reservoir layer 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "gallicchio2017deep"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ The readout take as input the output of the reservoir and is made by 2 dense layers with, respectively, 100 and 50 units and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ReLu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ activation function with two dropout layers after each dense layer. The output is a dense layer with 6 units (as the number of labels) and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+sigmoid
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ as activation function.
+\begin_inset Newline newline
+\end_inset
+
+ The model is optimized minimizing the binary crossentropy using 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+Adam
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ as optimizer with a learning rate of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.001
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+. The total number of trainable parameters are 25,456 and the number of epochs used for the training is 1.
+\begin_inset Newline newline
+\end_inset
+
+ A tf-idf vectorization of the inputs are provided to the model using 10 most common words.
+\end_layout
+
+\begin_layout Subsection
+DistilBERT
+\end_layout
+
+\begin_layout Standard
+The distillation is a compression technique in which a compact model, the student, is trained to reproduce the behaviour of a larger model, the teacher, or an ensemble of models, in some sense it is similar to a posterior approximation.
+\begin_inset Newline newline
+\end_inset
+
+ Bert (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+bert-base
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+) is an encoder-decoder network. Both encoder and decoder sections of transformer are a stack of 6 identical layers of multi-head attention and feed forward sublayers with 768 hidden units. The decoder has an additional sublayer which performs attention over output.
+\begin_inset Newline newline
+\end_inset
+
+ DistilBERT is a small, fast, cheap and light Transformer model trained by distilling BERT base. It has 40% less parameters than 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+bert-base-uncased
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+, runs 60% faster while preserving over 95% of BERTâs performances. It does not have token-type embeddings, pooler and retains only half of the layers of BERT and it has 66M parameters 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "sanh2019distilbert"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ The model is implemented using TFDistilBertModel based on 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+distilbert-base-uncased
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ of huggingface library. The output of the [CLS] token is fed in input to a dense layer with 50 units and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ReLu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ activation function, a dropout of the 10% and finally to a dense layer of 6 units (as the number of labels) with a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+sigmoid
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ activation function.
+\begin_inset Newline newline
+\end_inset
+
+ The model is optimized minimizing the binary crossentropy using 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+Adam
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ as optimizer.
+\begin_inset Newline newline
+\end_inset
+
+ There are two versions of the model: the one with distilBERT layer with non trainable and fixed weights with only 38,756 trainable parameters over 66,401,636 and the other with distilBERT finetuned with 66,401,636 trainable parameters.
+\begin_inset Newline newline
+\end_inset
+
+ The first model is trained for 4 epochs, instead for the second have been used 2 epochs.
+\begin_inset Newline newline
+\end_inset
+
+ It is used the class DistilBertTokenizerFast of huggingface for the tokenization of the inputs. The inputs are passed in batches to the model and accepts also the attention mask of the corresponding inputs. The input sequences has a maximum length of 100.
+\end_layout
+
+\begin_layout Section
+Results and discussion
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+captionof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+figure
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Average percentage of classes per label.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename avg_class_per_label.png
+	scale 28
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab_avg_class"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+AUC score uses True Positive Rate (TPR or Recall) and False Positive Rate (FPR). Precision-Recall analysis, on the other hand, exchanges FPR for Precision. Then, while AUC uses all the cells (TP, FP, TN, FN) of the Confusion Matrix, Precision-Recall disregards the True Negatives, which have a high impact on an imbalanced problem, since almost all of the data is of the negative class. Therefore, Precision-Recall gives more weight to the majority class (the negative class) than the AUC. This is why the AUC is more suitable for heavily imbalanced problems 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "MetricsforImbalanced"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "ROCCurvesImbalancedClassification"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ The best model is the Logistic Regression with an AUC score of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.9734
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ far from the Kaggle SOTA AUC of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.9885
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ and a low accuracy of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.8130
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ that is not significant for this task as stated before.
+\begin_inset Newline newline
+\end_inset
+
+ The second best model is distilBERT with an AUC score of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.9411
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ and an accuracy of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+0.9713
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ Overall the two models are slightly similar w.r.t. F1 score.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tabularx}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Y |YYYYY|Y
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Model
+\series default
+ & 
+\series bold
+P
+\series default
+ & 
+\series bold
+R
+\series default
+ & 
+\series bold
+F1
+\series default
+ & 
+\series bold
+AUC
+\series default
+ & 
+\series bold
+Accuracy
+\series default
+ & 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Multino-mialNB
+\series default
+ & 0.90 & 0.11 & 0.19 & 0.8482 & 0.8986 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.84 & 0.12 & 0.20 & 0.8482 & 0.8986 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+LinearSVC
+\series default
+ & 0.67 & 0.77 & 0.72 & 0.8263 & 0.8950 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.47 & 0.81 & 0.59 & 0.8429 & 0.8325 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Logistic Regression
+\series default
+ & 0.61 & 0.85 & 0.70 & 0.9782 & 0.88 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.42 & 0.88 & 0.56 & 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cellcolor{lightgray}
+\end_layout
+
+\end_inset
+
+0.9734 & 0.8130 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+KNeighbors Classifier
+\series default
+ & 0.81 & 0.17 & 0.27 & 0.5710 & 0.9012 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.63 & 0.18 & 0.28 & 0.5729 & 0.8999 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+MLP-Classifier
+\series default
+ & 0.73 & 0.66 & 0.69 & 0.9594 & 0.9001 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.54 & 0.69 & 0.60 & 0.9564 & 0.8524 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+DeepESN
+\series default
+ & 0.21 & 0.01 & 0.01 & 0.7145 & 0.9629 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.17 & 0.00 & 0.01 & 0.6779 & 0.9621 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+distilBERT
+\series default
+ & 0.82 & 0.54 & 0.64 & 0.9567 & 0.9790 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.65 & 0.51 & 0.56 & 0.9411 & 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cellcolor{lightgray}
+\end_layout
+
+\end_inset
+
+0.9713 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+distilBERT (finetuned)
+\series default
+ & 0.84 & 0.54 & 0.65 & 0.9544 & 0.9790 & 
+\series bold
+VL
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ & 0.66 & 0.52 & 0.57 & 0.9403 & 0.9711 & 
+\series bold
+TS
+\series default
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tabularx}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+captionof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+table
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Validation and Test scores (Kaggle SOTA AUC: 0.9885).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab_val_scores"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+This task was very challenging in terms of training a model on sparse toxic comments.
+\begin_inset Newline newline
+\end_inset
+
+ It was a surprise to notice how a simple model in a OvR setting performs better than complex models as distilBERT.
+\begin_inset Newline newline
+\end_inset
+
+ Probably a model selection phase and the using of more epochs should increase the performances of distilBERT, but training a transformer is heavy and requires a lot of time.
+\begin_inset Newline newline
+\end_inset
+
+ In our opinion the models performances are far from the State of the Art because of the imbalanced dataset, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab_avg_class"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, that led to have low value of P/R and F1 scores.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a future work, 5 experiments could be done to handle unbalanced data as follows: 
+\end_layout
+
+\begin_layout Enumerate
+Define higher weight for label â1â: Depending on how imbalanced the data is, we put higher weight on the minority label to force the classifier to work harder on label â1â. For example, if the ratio of label â1â to the label â0â is 1:9 we will put 0.9 as the weight factor on label â1â. 
+\end_layout
+
+\begin_layout Enumerate
+Over-sampling label â1â (minority class): To reduce the imbalance, we simply duplicate samples with label â1â to achieve 1:1 as the ratio of negative samples to positive samples. But there is a downfall for this method. It might result in over-fitting. 
+\end_layout
+
+\begin_layout Enumerate
+Under-sampling label â0â (majority class): To reduce the imbalance, this time we reduce the number of negative samples with label â0â to get the ratio of negative samples to positive samples closer to 1:1. This also has a disadvantage of losing potentially important data. 
+\end_layout
+
+\begin_layout Enumerate
+Performing dataset augmentation. 
+\end_layout
+
+\begin_layout Enumerate
+Performing stratified sampling during training. 
+\end_layout
+
+\begin_layout Standard
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "sample.bib"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
